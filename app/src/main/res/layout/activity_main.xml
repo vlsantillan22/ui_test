@@ -4,19 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/transparent"
+    android:background="@android:color/white"
     tools:context=".MainActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/map_bg"
-        android:layout_margin="12dp"
-        >
+        android:layout_height="match_parent">
         <RelativeLayout
             android:id="@+id/toolbar"
             android:paddingTop="10dp"
-            android:background="@drawable/toolbar_bg"
+            android:background="@color/colorPrimary"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:paddingStart="16dp">
