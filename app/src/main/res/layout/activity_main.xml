@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/map_bg"
+        android:layout_margin="12dp"
+        >
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:paddingTop="10dp"
+            android:background="@drawable/toolbar_bg"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:paddingStart="16dp">
+            <ImageView
+                android:id="@+id/imgv_map_icon"
+                android:src="@android:drawable/ic_dialog_map"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="8dp"/>
+            <TextView
+                android:id="@+id/txtv_place"
+                android:text="Simtat HaCarmel 12"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_toEndOf="@id/imgv_map_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="Parking"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:layout_toEndOf="@id/imgv_map_icon"
+                android:layout_below="@id/txtv_place"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/dummy_map"
+            android:layout_above="@id/checkbox_container"
+            android:background="@android:color/darker_gray"
+            android:layout_below="@id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <!--<fragment-->
+            <!--android:layout_above="@id/checkbox_container"-->
+            <!--android:layout_below="@id/toolbar"-->
+            <!--android:name="com.google.android.gms.maps.MapFragment"-->
+            <!--android:id="@+id/map"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"/>-->
+
+        <RelativeLayout
+            android:layout_above="@id/checkbox_container"
+            android:layout_width="match_parent"
+            android:layout_height="105dp">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@android:color/white"
+                android:layout_alignParentBottom="true"/>
+            <FrameLayout
+                android:background="@drawable/action_btn_shadow_bg"
+                android:layout_marginTop="8dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="100dp"
+                android:layout_height="100dp"/>
+            <FrameLayout
+                android:background="@drawable/action_btn_bg"
+                android:layout_centerHorizontal="true"
+                android:layout_width="100dp"
+                android:layout_height="100dp">
+                <ImageView
+                    android:padding="16dp"
+                    android:src="@drawable/babyimg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp">
+                <TextView
+                    android:text="Chocking"
+                    android:textSize="24dp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="incident"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp">
+                <TextView
+                    android:text="0:00:27"
+                    android:textSize="24dp"
+                    android:textColor="#D60000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="time elapsed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:background="@drawable/map_bg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp">
+            <ImageView
+                android:src="@drawable/ic_av_timer"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp" />
+            <TextView
+                android:text="3 Mins"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/checkbox_container"
+            android:weightSum="1"
+            android:gravity="center"
+            android:layout_above="@id/btn_container"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_weight=".3"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:src="@drawable/ic_checkbox"
+                    android:background="@drawable/ic_ellipse"
+                    android:padding="5dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp" />
+                <TextView
+                    android:text="x1 EMTs"
+                    android:textSize="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight=".3"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:src="@drawable/ic_ellipse_gray"
+                    android:layout_marginEnd="8dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="x0 paramedic"
+                        android:textSize="8sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:text="not necessary"
+                        android:textSize="6sp"
+                        android:layout_gravity="end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight=".3"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:src="@drawable/ic_ellipse_red"
+                    android:layout_marginEnd="8dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="x1 doctor"
+                        android:textSize="8sp"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:text="you are"
+                        android:textSize="6sp"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:layout_gravity="end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_container"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="160dp">
+            <FrameLayout
+                android:background="@drawable/btn_accept_bg"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="10dp"
+                android:paddingStart="16dp">
+                <ImageView
+                    android:src="@drawable/ic_check_circle"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+                <TextView
+                    android:text="accept the call"
+                    android:textSize="24dp"
+                    android:textColor="@android:color/white"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:background="@drawable/btn_cancel_bg"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:paddingStart="16dp">
+                <ImageView
+                    android:src="@drawable/ic_cancel"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+                <TextView
+                    android:text="cancel"
+                    android:textSize="24dp"
+                    android:textColor="@color/cancel_btn"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </FrameLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
